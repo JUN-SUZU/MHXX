@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>改造クエストを作成しましょう！</title>
+  <style>
+    body{
+    	background-color:#f5deb3
+    }
+    p{
+    	font-size:21px
+    }
+    ul{
+    	font-size:18px
+    }
+    .em1{font-size: 23px;
+         color:red}
+  </style>
+</head>
+<body>
+  <div id="midasi">
+  <h1>モンスターハンターダブルクロスで改造クエストを作成しよう！</h1>
+  </div>
+  <div class="main">
+  <p>
+  <a href="https://www.youtube.com/channel/UCy0NcHPvETNDcKtoOnoF8iw">JUN-SUZUのYouTubeチャンネル</a>
+  </p>
+  </div>
+  <a href="https://github.com/JUN-SUZU/MHXXcustomquest/raw/main/MHXXQuestEditor.zip"><img src="https://github.com/JUN-SUZU/MHXXcustomquest/raw/main/MHXX.jpg" alt="モンスターハンターダブルクロス！"></a>
+  <ul>
+  <li>まず上の画像をクリックして作成ツールをダウンロードしましょう！</li>
+  <li>ダウンロードできたらzipファイルを解凍します。</li>
+  <li>中にあるQuest_Construct.exeを実行しましょう</li>
+  <li>クエストリストフォルダに入っている好きなクエストファイルを選びましょう。</li>
+  <li>選んだクエストファイルをさっき起動したQuest_ConstructにD&D(ドラッグアンドドロップ)します。</li>
+  <li>解凍されたクエストフォルダーはquest_openというフォルダーに保存されます。</li>
+  <li>つぎにQuedixx.exeを実行します。</li>
+  <li>quest_openの中の先ほど解凍したフォルダーをフォルダーごとQuedixxにD&Dします。</li>
+  <li class="em1">あとは好きなようにいじっていきますが次のことに注意しないとすぐにエラーを吐きます</li>
+</ul>
+<p class="em2">１・クエストIDを弄らない</p>
+<p>クエストIDが整合されていないと必ずエラーになります。</p>
+<p class="em2">２・エリアを変更する際は座標に注意</p>
+<p>行き先やエリア番号を変更するとモンスターが範囲外に行く可能性があります。</p>
+<p class="em2">３・G級クエストは変更できない</p>
+<p>下位・上位のイベントクエストしか作れません</p>
+<p class="em2">４・クエストの種類を間違えない</p>
+<p>大連続にしようとして5体用意しても種類が狩猟などになっていたら出現しません</p>
+<p class="em2">５・特殊なクエストのモンスター</p>
+<p>ラオシャンロンは砦以外では動けません。また、一体だけにしましょう</p>
+<p>クエスト自体が特殊だからイベントクエストのラオをベースに弄る必要あり</p>
+<p>アトラルカは形態変化するためアトラルカ(58)と不明(57)を一緒に入れる必要あり</p>
+<p>不明(57)は保存するときに消えるのでバイナリエディタで直接書き換える</p>
+<p>また、最初に同時に出現させる必要があります。また、倒しても倒した判定になりません</p>
+<p class="em2">極端にモンスターのサイズを変更しない</p>
+<p>10%～500%ぐらいにしておきましょう</p>
+<ul>
+	<li>いじったら・ファイル→全て上書き保存・をして終了しましょう。</li>
+	<li>保存する際に勝手に一人限定になるのでバイナリエディタで書きかえます。</li>
+	<li><a href="https://github.com/JUN-SUZU/MHXXcustomquest/raw/main/Stirling.exe">String(バイナリエディタ)</a>
+	</li>
+	<li>questdata....mibというファイルをStringにDDして</li>
+	<li>0000001Aが2Fになっているので0や0Dなどにしましょう</li>
+	<li>保存したら....bakというファイルはいらないので消しておきます</li>
+	<li>最後にQuest_ConstructにクエストフォルダをフォルダごとDDすると圧縮されてquestフォルダーに保存されます</li>
+</ul>
+<ul>
+	<h2>3DSに入れていく！</h2>
+	<li>圧縮したarcクエストファイルを・3dsに入れるもの＞mhxx_data_manager＞quest＞mhxx</li>
+	<li>に入れます。mhxx_data_managerというフォルダーごとSDカードの3dsファイルに入れればPCの作業は終了！</li>
+	<li>SDカードを3dsに戻してHomeBrewLauncherでmhxx data managerを起動!</li>
+	<li>import ＞ quests ＞ mhxxを選択し、実行！</li>
+	<li>これで改造クエストがMHXXにインポートされました。</li>
+	<li>お疲れ様でした。</li>
+</ul>
+</body>
+</html>
